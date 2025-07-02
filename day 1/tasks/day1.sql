@@ -1,0 +1,25 @@
+-- 1.Define what a database is and give two real-world examples (not from the notes).
+-- A database is an organized collection of structured information or data, usually 
+-- stored electronically in a computer system. It allows data to be easily accessed, managed,
+-- modified, updated, and analyzed.
+-- *Library Management System
+-- *Online Shopping Platform
+-- 2.List three differences between relational and non-relational databases.
+-- Data Structure -->Relational database Store data in tables with rows and columns. --> non relational Store data in flexible formats like documents, key-value pairs, graphs, or wide-columns.
+-- Schema	-->Relational database Have a fixed schema — data must follow a predefined structure. --> non relational Schema-less or flexible schema — data can have different structures in the same collection.
+-- Scalability -->Relational database	Typically scale vertically (adding more power to a single server). --> non relational	Typically scale horizontally (adding more servers to handle more data).
+-- 3.Name two advantages of using a DBMS.
+-- *Data Integrity and Security
+-- *Data Sharing and Multi-user Access
+-- 4.List three popular RDBMS and two popular NoSQL databases.
+-- RDBMS
+-- MySQL
+-- PostgreSQL
+-- Oracle Database
+-- NoSQL
+-- MongoDB (Document-based)
+-- Cassandra (Wide-column store)
+-- 5.Install MySQL, PostgreSQL, or SQLite on your system and confirm the installation.
+-- Yes , i have installed
+-- 6. Start your SQL server and log in using a command-line tool.
+-- yes, completed
