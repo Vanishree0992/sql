@@ -459,6 +459,267 @@ SQL DAY 21
 - List rooms never booked.
  
 ---
+SQL DAY 22 
+50 TASKS
+🔁 A. Subqueries (20 Tasks)
+✅ 1–5: Subqueries in SELECT Clause
+1.	Retrieve each employee’s name and compare their salary to the highest salary in the company.
+2.	Show each employee’s salary and the total number of employees (using subquery).
+3.	List employees with their salaries and the minimum salary in their department.
+4.	Display each product with its price and the highest price in the product table.
+5.	Show each employee’s bonus as 10% of the max salary (use subquery in SELECT).
+________________________________________
+✅ 6–10: Subqueries in FROM Clause
+6.	Display departments where average salary is more than ₹10,000 using a subquery in the FROM clause.
+7.	Get department-wise average salaries and sort only those greater than the company-wide average salary.
+8.	From a subquery table of top 3 salaried employees, list employee names and departments.
+9.	Calculate total salary by department, only for departments that have more than 5 employees.
+10.	Create a temporary table using subquery to calculate salary ranges (min, max, avg) per department.
+________________________________________
+✅ 11–15: Subqueries in WHERE Clause
+11.	Show employees who earn more than the average salary.
+12.	List products whose price is higher than the average price.
+13.	Find employees whose department has more than 3 employees (using COUNT subquery).
+14.	Get customers who have placed more orders than the average number of orders per customer.
+15.	Display products whose quantity is below the minimum quantity across all products.
+________________________________________
+✅ 16–20: Correlated vs. Non-Correlated Subqueries
+16.	Find employees who earn more than the average salary in their department.
+17.	List employees who are the highest paid in their department.
+18.	Show departments that have at least one employee earning more than ₹50,000.
+19.	List employees whose salaries are higher than all their team members (correlated).
+20.	Identify employees who earn less than the maximum salary of any department (non-correlated).
+________________________________________
+🔗 B. UNION, UNION ALL, INTERSECT, EXCEPT (10 Tasks)
+✅ 21–25: UNION & UNION ALL
+21.	List all unique customer names from two tables: online_orders and store_orders (use UNION).
+22.	List all customer names (including duplicates) from online_orders and store_orders (UNION ALL).
+23.	Combine employee names from full_time_employees and contract_employees.
+24.	Combine all product names from electronics and furniture tables.
+25.	Display all city names from customers and suppliers (with and without duplicates).
+________________________________________
+✅ 26–30: INTERSECT & EXCEPT
+26.	Find employees who work in both department 101 (IT) and 102 (Finance) – INTERSECT.
+27.	List employees in IT but not in HR – use EXCEPT or MINUS.
+28.	Get product IDs available in both wholesale and retail tables.
+29.	Find customers who only ordered from the website, not from stores.
+30.	List employee IDs that exist in current_employees but not in resigned_employees.
+________________________________________
+🔍 C. Complex Queries with JOIN, GROUP BY, Aggregation (10 Tasks)
+✅ 31–35: JOIN + GROUP BY + Aggregation
+31.	Show total salary paid per department (join with department table).
+32.	Find number of employees in each department.
+33.	Get department names and average salary of employees working in them.
+34.	Display departments with a total salary bill above ₹1,00,000.
+35.	Show number of employees hired per year.
+________________________________________
+✅ 36–40: JOIN + Subquery + Aggregation
+36.	Find departments where the average salary is higher than the company's average salary.
+37.	Display departments and the name of the highest-paid employee in each.
+38.	Get names of departments where the employee count is below the average department size.
+39.	Show all departments and count of employees earning more than ₹50,000.
+40.	List employees whose salary is more than their department’s average salary.
+________________________________________
+🎯 D. Conditional Logic & Date Functions (10 Tasks)
+✅ 41–45: CASE WHEN – Conditional Aggregation
+41.	Classify employees as High, Medium, or Low salary using CASE WHEN.
+42.	Display product stock status as Low, Moderate, or High based on quantity.
+43.	Show department-wise count of employees in each salary category (using CASE inside SUM).
+44.	Show employees with remarks: New Joiner, Mid-Level, or Senior based on their joining year.
+45.	For each employee, display salary grade using CASE WHEN with 3 conditions.
+________________________________________
+✅ 46–50: Working with Date Functions
+46.	List employees who joined in the last 6 months using DATE_SUB.
+47.	Show employees whose tenure is more than 2 years using DATEDIFF or TIMESTAMPDIFF.
+48.	Display employees' names and months since their joining.
+49.	Count how many employees joined in each year using YEAR(hire_date).
+50.	List all employees whose birthday is in the current month.
+
+
+
+20 MINI PROJECTS
+ 
+✅ 1. Employee Salary Insight Dashboard
+Domain: HR
+Objective: Create insights comparing each employee’s salary to various benchmarks.
+Requirements:
+•	Show each employee’s salary alongside company-wide max, avg, and min salary (subqueries in SELECT).
+•	Classify salary as High, Medium, or Low using CASE WHEN.
+•	Use correlated subquery to compare salary to department average.
+•	Display department-wise salary summary with JOIN and GROUP BY.
+________________________________________
+✅ 2. Department Budget Analyzer
+Domain: Corporate Finance
+Objective: Analyze departmental salary expenses.
+Requirements:
+•	Use subquery in FROM clause to calculate average salary by department.
+•	Filter only those departments with average salary > ₹50,000.
+•	Show total salary paid by each department.
+•	Show which department has the highest total salary using subquery comparison.
+________________________________________
+✅ 3. Employee Transfer Tracker
+Domain: HR / Operations
+Objective: Track employees who worked in multiple departments.
+Requirements:
+•	Use INTERSECT to find employees in both IT and Finance.
+•	Use EXCEPT to find employees in one dept but not in another.
+•	Use subqueries to find employees who transferred in the last 6 months.
+•	Track unique department count per employee using subquery.
+________________________________________
+✅ 4. Product Category Merger Report
+Domain: E-Commerce
+Objective: Analyze merged product data from multiple categories.
+Requirements:
+•	Use UNION to combine products from electronics, clothing, and furniture.
+•	Use UNION ALL to check duplicate products.
+•	Show max price, min price using subqueries.
+•	Classify products by price using CASE.
+________________________________________
+✅ 5. Customer Purchase Comparison Tool
+Domain: Retail
+Objective: Compare online and offline customer purchases.
+Requirements:
+•	Use UNION and UNION ALL to merge customer data from two sources.
+•	Use INTERSECT to find customers active on both platforms.
+•	Use subqueries to find customers who bought more than the average.
+•	Classify customers based on purchase frequency.
+________________________________________
+✅ 6. High Performer Identification System
+Domain: HR
+Objective: Find top-performing employees.
+Requirements:
+•	Use a correlated subquery to get employees with salary > dept average.
+•	Highlight top 5 earners using subquery with ORDER BY LIMIT.
+•	Show department-level performance summary using JOIN + GROUP BY.
+•	Use CASE WHEN to classify employee performance level.
+________________________________________
+✅ 7. Inventory Stock Checker
+Domain: Warehouse Management
+Objective: Check stock levels across categories.
+Requirements:
+•	Merge items using UNION from different category tables.
+•	Use subquery to find average stock.
+•	Use CASE to tag stock as High, Moderate, Low.
+•	Use EXCEPT to find items available in one warehouse but not in another.
+________________________________________
+✅ 8. Employee Joiner Trend Report
+Domain: HR Analytics
+Objective: Analyze hiring patterns over time.
+Requirements:
+•	Use DATE_SUB to get employees who joined in the last 6 months.
+•	Use subqueries to find employees who joined before and after company average join date.
+•	Aggregate joiners per month using GROUP BY.
+•	Use CASE WHEN for year-wise hiring classification.
+________________________________________
+✅ 9. Department Performance Ranker
+Domain: Management
+Objective: Rank departments by performance.
+Requirements:
+•	Use subqueries to calculate total, average salary per department.
+•	Use JOIN to get department names.
+•	Use CASE WHEN to assign performance tags.
+•	Filter departments above average salary expense.
+________________________________________
+✅ 10. Cross-Sell Opportunity Finder
+Domain: Sales Analytics
+Objective: Identify common customers across categories.
+Requirements:
+•	Use INTERSECT to find customers who purchased from multiple categories.
+•	Use EXCEPT to find customers loyal to only one.
+•	Use subqueries to find customers who spend above average.
+•	Merge customer lists with UNION.
+________________________________________
+✅ 11. Salary Band Distribution Analyzer
+Domain: HR
+Objective: Categorize employees based on salary bands.
+Requirements:
+•	Use subqueries to get company and department averages.
+•	Use CASE to tag salaries as Band A, B, C.
+•	Use GROUP BY to count employees per band per department.
+•	Include only those departments where band A employees > 3.
+________________________________________
+✅ 12. Product Launch Impact Report
+Domain: Marketing
+Objective: Analyze the success of new product launches.
+Requirements:
+•	Use DATE functions to get products launched in the last 3 months.
+•	Compare sales of new vs existing products using UNION.
+•	Use subqueries to find average sales.
+•	Classify launch as Successful/Neutral/Fail using CASE.
+________________________________________
+✅ 13. Supplier Consistency Checker
+Domain: Supply Chain
+Objective: Evaluate supplier consistency.
+Requirements:
+•	Use INTERSECT to find suppliers present in both Q1 and Q2.
+•	Use EXCEPT to find suppliers missing in Q2.
+•	Use subquery to compare average delivery time.
+•	Tag supplier status using CASE.
+________________________________________
+✅ 14. Student Performance Dashboard
+Domain: Education
+Objective: Analyze academic scores.
+Requirements:
+•	Use subqueries to calculate subject-wise and overall average marks.
+•	Use CASE to tag students as Pass, Merit, Distinction.
+•	Use JOIN to combine student and course tables.
+•	Filter students above average using WHERE with subquery.
+________________________________________
+✅ 15. Revenue Comparison Engine
+Domain: Finance
+Objective: Compare monthly revenue across years.
+Requirements:
+•	Use DATE functions to group revenue by year/month.
+•	Use subquery to calculate year-wise average revenue.
+•	Highlight months where revenue was higher than average.
+•	Use CASE to classify month as High/Low revenue.
+________________________________________
+✅ 16. Resignation & Replacement Audit
+Domain: HR
+Objective: Audit resigned and hired employees.
+Requirements:
+•	Use EXCEPT to list resigned employees not replaced.
+•	Use INTERSECT to identify overlapping designations.
+•	Use subqueries to find departments with highest attrition.
+•	Use JOIN and GROUP BY for department-level resignation count.
+________________________________________
+✅ 17. Product Return & Complaint Analyzer
+Domain: Customer Support
+Objective: Track product return behavior.
+Requirements:
+•	Use subqueries to find most returned products.
+•	Use CASE to classify return reason (Damaged, Late, Not as Described).
+•	Use JOIN to link orders and returns.
+•	Filter products with return rate above average.
+________________________________________
+✅ 18. Freelancer Project Tracker
+Domain: Freelance Portal
+Objective: Analyze freelancer earnings and projects.
+Requirements:
+•	Use subquery to calculate average earnings.
+•	Use correlated subquery to compare project earnings to user average.
+•	Use CASE to classify freelancers by earnings.
+•	Use GROUP BY to show projects completed per freelancer.
+________________________________________
+✅ 19. Course Enrollment Optimizer
+Domain: E-Learning
+Objective: Analyze course popularity.
+Requirements:
+•	Use UNION to combine enrollments from free and paid platforms.
+•	Use subquery to find average enrollment per course.
+•	Use JOIN to connect courses and categories.
+•	Classify courses as Popular/Regular based on average.
+________________________________________
+✅ 20. Vehicle Maintenance Tracker
+Domain: Transportation
+Objective: Track vehicle maintenance schedules.
+Requirements:
+•	Use DATE_SUB to list vehicles due for service in the next 30 days.
+•	Use subqueries to find vehicles with highest service cost.
+•	Use CASE to label urgency (High, Medium, Low).
+•	Use GROUP BY to get total cost per vehicle type.
+
+
  
 ### 16. **Online Learning Platform Statistics**
 - Tables: courses, users, enrollments, completions
